@@ -1,0 +1,1786 @@
+{
+  "info": {
+    "name": "IT Inventory API (Lab 4, variant 47)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:5000"
+    }
+  ],
+  "item": [
+    {
+      "name": "office",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/office",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Офіс Чернівці\",\n  \"city\": \"Чернівці\",\n  \"address\": \"вул. Головна, 1\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/office/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "11"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Офіс Чернівці\",\n  \"city\": \"Чернівці\",\n  \"address\": \"вул. Головна, 1\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/office/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "11"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"address\": \"вул. Кобилянської, 5\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "11"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "workplace",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/workplace",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "workplace"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/workplace/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "workplace",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/workplace",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "workplace"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"A-04\",\n  \"room_number\": \"103\",\n  \"office_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/workplace/13",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "workplace",
+                "13"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"A-04\",\n  \"room_number\": \"103\",\n  \"office_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/workplace/13",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "workplace",
+                "13"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"room_number\": \"104\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/workplace/13",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "workplace",
+                "13"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "employee",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employee",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Петро\",\n  \"last_name\": \"Олійник\",\n  \"email\": \"p.oliinyk@company.ua\",\n  \"position\": \"Junior Developer\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employee/13",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee",
+                "13"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Петро\",\n  \"last_name\": \"Олійник\",\n  \"email\": \"p.oliinyk@company.ua\",\n  \"position\": \"Junior Developer\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employee/13",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee",
+                "13"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"position\": \"Middle Developer\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee/13",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee",
+                "13"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "employee_workplace (M:M)",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee-workplace",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee-workplace"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by key",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee-workplace/1/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee-workplace",
+                "1",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employee-workplace",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee-workplace"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employee_id\": 12,\n  \"workplace_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employee-workplace/12/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee-workplace",
+                "12",
+                "1"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employee_id\": 12,\n  \"workplace_id\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee-workplace/12/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee-workplace",
+                "12",
+                "2"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "manufacturer",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/manufacturer",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "manufacturer"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/manufacturer/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "manufacturer",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/manufacturer",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "manufacturer"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Acer\",\n  \"country\": \"Тайвань\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/manufacturer/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "manufacturer",
+                "11"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Acer\",\n  \"country\": \"Тайвань\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/manufacturer/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "manufacturer",
+                "11"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"country\": \"Китай\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/manufacturer/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "manufacturer",
+                "11"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "equipment_type",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-type",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-type"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-type/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-type",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-type",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-type"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Планшет\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-type/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-type",
+                "11"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Планшет\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-type/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-type",
+                "11"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Графічний планшет\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-type/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-type",
+                "11"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "equipment_model",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-model",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-model"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-model/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-model",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-model",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-model"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"ThinkPad X1 Carbon\",\n  \"manufacturer_id\": 1,\n  \"equipment_type_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-model/15",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-model",
+                "15"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"ThinkPad X1 Carbon\",\n  \"manufacturer_id\": 1,\n  \"equipment_type_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-model/15",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-model",
+                "15"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"ThinkPad X1 Carbon Gen 12\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-model/15",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-model",
+                "15"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "computer_configuration",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/computer-configuration",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "computer-configuration"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/computer-configuration/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "computer-configuration",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/computer-configuration",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "computer-configuration"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cpu\": \"Intel Core Ultra 7 155H\",\n  \"ram_gb\": 32,\n  \"storage_gb\": 1024,\n  \"os\": \"Windows 11 Pro\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/computer-configuration/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "computer-configuration",
+                "11"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cpu\": \"Intel Core Ultra 7 155H\",\n  \"ram_gb\": 32,\n  \"storage_gb\": 1024,\n  \"os\": \"Windows 11 Pro\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/computer-configuration/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "computer-configuration",
+                "11"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ram_gb\": 64\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/computer-configuration/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "computer-configuration",
+                "11"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "equipment",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"inventory_number\": \"INV-016\",\n  \"serial_number\": \"PF4A016\",\n  \"status\": \"На складі\",\n  \"purchase_date\": \"2025-01-10\",\n  \"equipment_model_id\": 1,\n  \"computer_configuration_id\": 5,\n  \"office_id\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment/16",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment",
+                "16"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"inventory_number\": \"INV-016\",\n  \"serial_number\": \"PF4A016\",\n  \"status\": \"На складі\",\n  \"purchase_date\": \"2025-01-10\",\n  \"equipment_model_id\": 1,\n  \"computer_configuration_id\": 5,\n  \"office_id\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment/16",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment",
+                "16"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"В роботі\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment/16",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment",
+                "16"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "equipment_assignment",
+      "item": [
+        {
+          "name": "Get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-assignment",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-assignment"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-assignment/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-assignment",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-assignment",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-assignment"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"issued_at\": \"2025-02-01\",\n  \"returned_at\": null,\n  \"equipment_id\": 13,\n  \"employee_id\": 2,\n  \"workplace_id\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-assignment/16",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-assignment",
+                "16"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"issued_at\": \"2025-02-01\",\n  \"returned_at\": null,\n  \"equipment_id\": 13,\n  \"employee_id\": 2,\n  \"workplace_id\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Partial update (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/equipment-assignment/16",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-assignment",
+                "16"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"returned_at\": \"2025-03-01\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-assignment/16",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-assignment",
+                "16"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Зв'язки M:1",
+      "item": [
+        {
+          "name": "Робочі місця офісу",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office/1/workplaces",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "1",
+                "workplaces"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Усі офіси з робочими місцями",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office/workplaces",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "workplaces"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Обладнання офісу",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office/1/equipment",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "1",
+                "equipment"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Обладнання офісу на складі",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office/1/equipment?status=На складі",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "1",
+                "equipment"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "На складі"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Моделі виробника",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/manufacturer/2/models",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "manufacturer",
+                "2",
+                "models"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Моделі типу обладнання",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment-type/1/models",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment-type",
+                "1",
+                "models"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Видачі працівнику",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee/1/assignments",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee",
+                "1",
+                "assignments"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Історія видач обладнання",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/equipment/5/assignments",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "equipment",
+                "5",
+                "assignments"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Зв'язки M:M",
+      "item": [
+        {
+          "name": "Робочі місця працівника",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee/1/workplaces",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee",
+                "1",
+                "workplaces"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Працівники на робочому місці",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/workplace/1/employees",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "workplace",
+                "1",
+                "employees"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Усі працівники з робочими місцями",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee/workplaces",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee",
+                "workplaces"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Пошук і помилки",
+      "item": [
+        {
+          "name": "Офіси за містом",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office/city/Львів",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "city",
+                "Львів"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Працівники за прізвищем",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/employee/last-name/Коваленко",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee",
+                "last-name",
+                "Коваленко"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Помилка: неіснуючий офіс (FK)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/workplace",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "workplace"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"X-01\",\n  \"room_number\": \"1\",\n  \"office_id\": 99\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Помилка: видалити офіс з даними",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/office/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "office",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Помилка: дубль у M:M",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employee-workplace",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employee-workplace"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employee_id\": 1,\n  \"workplace_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+from .office_controller import OfficeController
+from .workplace_controller import WorkplaceController
+from .employee_controller import EmployeeController
+from .employee_workplace_controller import EmployeeWorkplaceController
+from .manufacturer_controller import ManufacturerController
+from .equipment_type_controller import EquipmentTypeController
+from .equipment_model_controller import EquipmentModelController
+from .computer_configuration_controller import ComputerConfigurationController
+from .equipment_controller import EquipmentController
+from .equipment_assignment_controller import EquipmentAssignmentController
+from .procedure_controller import ProcedureController
+
+office_controller = OfficeController()
+workplace_controller = WorkplaceController()
+employee_controller = EmployeeController()
+employee_workplace_controller = EmployeeWorkplaceController()
+manufacturer_controller = ManufacturerController()
+equipment_type_controller = EquipmentTypeController()
+equipment_model_controller = EquipmentModelController()
+computer_configuration_controller = ComputerConfigurationController()
+equipment_controller = EquipmentController()
+equipment_assignment_controller = EquipmentAssignmentController()
+procedure_controller = ProcedureController()
